@@ -1,0 +1,117 @@
+// 学生端与教师端有所差异，谨慎同步
+
+/* === Color === */
+
+$primary-color: #4e8cfe; // 基础色调
+$active-color: orange; // 激活色调
+$highlight-color: #FF4F3E; // 高亮色调
+$gradient-start-color: $primary-color; // 渐变起始色
+$gradient-end-color: #38b9fd; // 渐变结束色
+$normal-color: #666666; // 常规色（相对于Active）
+$sub-color: #808695; // 辅助色
+$disabled-color: #c5c8ce; // 失效色
+
+.theme-primary-color {
+  color: $primary-color !important;
+}
+
+.theme-primary-border-color {
+  border-color: $primary-color !important;
+}
+
+.theme-primary-background {
+  background: $primary-color !important;
+}
+
+.theme-highlight-color {
+  color: $highlight-color !important;
+}
+
+.theme-highlight-border-color {
+  border-color: $highlight-color !important;
+}
+
+.theme-highlight-background {
+  background: $highlight-color !important;
+}
+
+.theme-active-color {
+  color: $active-color !important;
+}
+
+.theme-active-background {
+  background: $active-color !important;
+}
+
+.theme-normal-color {
+  color: $normal-color !important;
+}
+
+.theme-sub-color {
+  color: $sub-color !important;
+}
+
+.theme-disabled-color {
+  background: $disabled-color !important;
+}
+
+.theme-disabled-bg {
+  background: $disabled-color !important;
+}
+
+.theme-background-gradient, .magic-bg {
+  background: $gradient-start-color;
+  background: -webkit-gradient(linear, 0 100%, 0 0, from($gradient-start-color), to($gradient-end-color)) !important;
+  background: -webkit-linear-gradient(90deg,$gradient-start-color, $gradient-end-color) !important;
+  background: linear-gradient(90deg,$gradient-start-color, $gradient-end-color) !important;
+  background: -moz-linear-gradient(90deg,$gradient-start-color, $gradient-end-color) !important;
+  background: -o-linear-gradient(90deg,$gradient-start-color, $gradient-end-color) !important;
+}
+
+/* === Dividers === */
+
+// Retina 1px 屏幕优化
+.app-retina-os .theme-divider:before {
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.theme-divider-top::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background-color: #e8eaec;
+  width: 100%;
+  height: 1px;
+}
+
+.theme-divider-right::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  background-color: #e8eaec;
+  width: 1px;
+  height: 100%;
+}
+
+.theme-divider-bottom::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background-color: #e8eaec;
+  width: 100%;
+  height: 1px;
+}
+
+.theme-divider-left::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background-color: #e8eaec;
+  width: 1px;
+  height: 100%;
+}

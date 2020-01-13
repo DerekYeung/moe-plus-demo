@@ -1,0 +1,13 @@
+{
+  "name": "ewsedu-ehome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src & npm run start",
+    "build": "cd src & npm run build"
+  },
+  "author": "DerekYeung",
+  "license": "ISC"
+}

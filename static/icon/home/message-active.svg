@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>news-active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="标签栏图标（实）" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-70.000000, -11.000000)">
+        <g id="标签栏--copy">
+            <g id="news-active" transform="translate(70.000000, 11.000000)">
+                <g id="news">
+                    <path d="M21.9999988,7.83065257e-16 C9.84819588,7.83065257e-16 0,8.61815905 0,19.2475892 C0,25.3254853 3.22394773,30.7311209 8.24999957,34.2632436 L8.24999957,44 L17.8887766,38.1535379 C19.2224439,38.3739512 20.5946883,38.5006888 21.9999988,38.5006888 C34.1518018,38.5006888 43.9999977,29.8825297 43.9999977,19.2530996 C44.0055087,8.61815905 34.1518018,0 21.9999988,7.83065257e-16 Z" id="Shape" fill="#1B8AE0" fill-rule="nonzero"></path>
+                    <path d="M28.6644407,27 L15.3355593,27 C14.5983306,27 14,26.328 14,25.5 C14,24.672 14.5983306,24 15.3355593,24 L28.6644407,24 C29.4016694,24 30,24.672 30,25.5 C30,26.328 29.4016694,27 28.6644407,27 Z" id="Path" fill="#FFFFFF"></path>
+                    <path d="M32.55998,18 L12.44002,18 C11.645129,18 11,17.328 11,16.5 C11,15.672 11.645129,15 12.44002,15 L32.55998,15 C33.354871,15 34,15.672 34,16.5 C34,17.334 33.354871,18 32.55998,18 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

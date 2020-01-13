@@ -1,0 +1,13 @@
+{
+  "home.html": {
+    "href": "home.html",
+    "resources": [],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [],
+    "refer": [],
+    "priority": 0
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<title>首页</title>
+		<style>
+			body {
+				background: #5487FA;
+				-webkit-background-size: cover;
+				background-size: cover;
+				background-image: url('static/launchBg.jpg');
+				background-repeat: no-repeat;
+			}
+
+			.login-logo {
+				margin-top: 160px;
+				text-align: center;
+			}
+
+			.login-logo .logo {
+				width: 90px;
+				margin-bottom: 20px;
+			}
+
+			.login-logo .login-tip {
+				font-weight: lighter;
+				color: #FFFFFF;
+				font-family: "Microsoft YaHei" ,"微软雅黑";
+				text-shadow: 0px 1px 1px #d6d6d6;
+			}
+
+			.mui-progressbar-success span {
+				background-color: #4cd964;
+			}
+
+			.mui-progressbar-warning span {
+				background-color: #f0ad4e;
+			}
+
+			.done span {
+				background-color: #dd524d !important;
+			}
+
+			.mui-progressbar-royal span {
+				background-color: #8a6de9;
+			}
+
+			.download-loading {
+				margin: 0 auto;
+				width: 80%;
+				text-align: center;
+			}
+
+			.download-loading .tip {
+				color: #FFFFFF;
+			}
+
+			.heivr-empty-list {
+				margin-top: 30px;
+			}
+
+			.not-load {
+				visibility: hidden;
+			}
+
+			.loading-indicator.light .loader-dot {
+				background-color: #fff
+			}
+
+			.loading-indicator .loader-dot:nth-child(1) {
+				-webkit-animation-delay: -.32s;
+				-moz-animation-delay: -.32s;
+				-ms-animation-delay: -.32s;
+				-o-animation-delay: -.32s;
+				animation-delay: -.32s
+			}
+
+			.loading-indicator .loader-dot:nth-child(2) {
+				-webkit-animation-delay: -.16s;
+				-moz-animation-delay: -.16s;
+				-ms-animation-delay: -.16s;
+				-o-animation-delay: -.16s;
+				animation-delay: -.16s
+			}
+
+			@-webkit-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-webkit-transform: scale(0)
+				}
+				40% {
+					-webkit-transform: scale(1)
+				}
+			}
+
+			@-moz-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-moz-transform: scale(0)
+				}
+				40% {
+					-moz-transform: scale(1)
+				}
+			}
+
+			@-ms-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-ms-transform: scale(0)
+				}
+				40% {
+					-ms-transform: scale(1)
+				}
+			}
+
+			@-o-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-o-transform: scale(0)
+				}
+				40% {
+					-o-transform: scale(1)
+				}
+			}
+
+			@keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					transform: scale(0)
+				}
+				40% {
+					transform: scale(1)
+				}
+			}
+
+			.loading-indicator {
+				margin: 10px auto;
+				width: 70px;
+				text-align: center;
+				z-index: 9999
+			}
+
+			.loading-indicator .loader-dot {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background-color: #EFEFEF;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				border-radius: 100%;
+				-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+				-moz-animation: bouncedelay 1.4s infinite ease-in-out;
+				-ms-animation: bouncedelay 1.4s infinite ease-in-out;
+				-o-animation: bouncedelay 1.4s infinite ease-in-out;
+				animation: bouncedelay 1.4s infinite ease-in-out;
+				-webkit-animation-fill-mode: both;
+				-moz-animation-fill-mode: both;
+				-ms-animation-fill-mode: both;
+				-o-animation-fill-mode: both;
+				animation-fill-mode: both
+			}
+			.hide {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="loading-tip" style="padding-top:200px">
+			<div class="normal-loading hide" id="loading-tip">
+				<div class="loading-indicator" style="margin-top: 10%;"><span class="loader-dot"></span><span class="loader-dot"></span><span class="loader-dot"></span></div>
+			</div>
+			<div id="downloading" class="download-loading hide">
+				<div class="tip" id="tip">正在更新数据 <span id="download-percent" class="update-state">0.0%</span></div>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.useGTpush = true;
+	</script>
+	<!--<script src="js/mui.js"></script>-->
+	<script src="js/build/vendor.bundle.js"></script>
+	<script src="js/build/index.js"></script>
+
+</html>

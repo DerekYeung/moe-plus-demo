@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<title>首页</title>
+		<link href="css/mui.css" rel="stylesheet" />
+		<style>
+			.mui-bar-tab .mui-tab-item{
+				opacity: 0.6;
+				-webkit-touch-callout:none;/*系统默认菜单被禁用*/
+				-webkit-user-select:none;/*webkit浏览器*/
+				-khtml-user-select:none;/*早期浏览器*/
+				-moz-user-select:none;/*火狐浏览器*/
+				-ms-user-select:none;/*IE浏览器*/
+				user-select:none;/*用户是否能够选中文本*/
+			}
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #1b8ae0 !important;
+				opacity: 1;
+			}
+			
+			.dui-tab-bar {
+				z-index: 9999;
+				background: white;
+				box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+				bottom: 0px;
+				transition: bottom 618ms;
+			}
+			.dui-tab-bar.loaded{
+				bottom: 0px;
+			}
+			.message-unread {
+				display: none;
+			}
+			
+			.has-unread .message-unread {
+				display: block;
+			}
+			.mui-tab-item img{
+				position: relative;
+			    top: 6px;
+			    width: 24px;
+			    height: 24px;
+			    padding-top: 0;
+			    padding-bottom: 0;
+			}
+			.mui-tab-item .on-active{
+				display: none;
+			}
+			.mui-tab-item.mui-active .on-active{
+				display: initial;
+			}
+			.mui-tab-item.mui-active .on-un-active{
+				display: none;
+			}
+			.mui-tab-label {
+			    font-size: 12px;
+			    display: block;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			}
+			.loading-indicator.light .loader-dot {
+				background-color: #fff
+			}
+			
+			.loading-indicator .loader-dot:nth-child(1) {
+				-webkit-animation-delay: -.32s;
+				-moz-animation-delay: -.32s;
+				-ms-animation-delay: -.32s;
+				-o-animation-delay: -.32s;
+				animation-delay: -.32s
+			}
+			
+			.loading-indicator .loader-dot:nth-child(2) {
+				-webkit-animation-delay: -.16s;
+				-moz-animation-delay: -.16s;
+				-ms-animation-delay: -.16s;
+				-o-animation-delay: -.16s;
+				animation-delay: -.16s
+			}
+			
+			@-webkit-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-webkit-transform: scale(0)
+				}
+				40% {
+					-webkit-transform: scale(1)
+				}
+			}
+			
+			@-moz-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-moz-transform: scale(0)
+				}
+				40% {
+					-moz-transform: scale(1)
+				}
+			}
+			
+			@-ms-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-ms-transform: scale(0)
+				}
+				40% {
+					-ms-transform: scale(1)
+				}
+			}
+			
+			@-o-keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					-o-transform: scale(0)
+				}
+				40% {
+					-o-transform: scale(1)
+				}
+			}
+			
+			@keyframes bouncedelay {
+				0%,
+				100%,
+				80% {
+					transform: scale(0)
+				}
+				40% {
+					transform: scale(1)
+				}
+			}
+			
+			.loading-indicator {
+				margin: 10px auto;
+				width: 70px;
+				text-align: center;
+				z-index: 9999
+			}
+			
+			.loading-indicator .loader-dot {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background-color: #1b8ae0;
+				-webkit-border-radius: 100%;
+				-moz-border-radius: 100%;
+				border-radius: 100%;
+				-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+				-moz-animation: bouncedelay 1.4s infinite ease-in-out;
+				-ms-animation: bouncedelay 1.4s infinite ease-in-out;
+				-o-animation: bouncedelay 1.4s infinite ease-in-out;
+				animation: bouncedelay 1.4s infinite ease-in-out;
+				-webkit-animation-fill-mode: both;
+				-moz-animation-fill-mode: both;
+				-ms-animation-fill-mode: both;
+				-o-animation-fill-mode: both;
+				animation-fill-mode: both
+			}
+			.hide {
+				display: none;
+			}
+			.tip {
+				text-align: center;
+				font-size: 14px;
+			}
+			.error {
+				font-size: 9px;
+				color: #2c5a7d9c;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="ui-loading-view">
+			<div class="loading-tip" style="padding-top:200px">
+				<div class="normal-loading" id="loading-tip">
+					<div class="loading-indicator" style="margin-top: 10%;"><span class="loader-dot"></span><span class="loader-dot"></span><span class="loader-dot"></span></div>
+				</div>
+				<div class="tip">载入中...</div>
+				<div class="error tip">如长时间无法显示，请手动重启App</div>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab dui-tab-bar">
+			<a class="mui-tab-item mui-active" controller="index">
+				<img src="static/icon/home/application.svg" class="on-un-active" />
+				<img src="static/icon/home/application-active.svg" class="on-active" />
+				<span class="mui-tab-label">Demo</span>
+			</a>
+		</nav>
+	</body>
+	<!--<script src="js/mui.js"></script>-->
+	<script src="js/build/vendor.bundle.js?v=home"></script>
+	<script src="js/build/home.js"></script>
+</html>

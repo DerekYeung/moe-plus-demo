@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "> 1%",
+          "last 2 versions",
+          "Android >= 4.0",
+          "not ie <= 8"
+        ]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-runtime"],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+    }
+  }
+}

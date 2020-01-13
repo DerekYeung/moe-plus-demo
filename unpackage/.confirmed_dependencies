@@ -1,0 +1,45 @@
+{
+  "index.html": {
+    "resources": [
+      "home.html",
+      "js/mui.js",
+      "js/build/vendor.bundle.js",
+      "js/build/index.js",
+      "static/loginBg.jpg",
+      "static/logo.png",
+      "static/logoTitle.png"
+    ],
+    "refer": [
+      "home.html"
+    ]
+  },
+  "home.html": {
+    "href": "home.html",
+    "resources": [
+      "js/mui.js",
+      "js/build/vendor.bundle.js",
+      "js/build/plus.js",
+      "css/mui.css",
+      "static/icon/home/message.svg",
+      "static/icon/home/message-active.svg",
+      "static/icon/home/contact.svg",
+      "static/icon/home/contact-active.svg",
+      "static/icon/home/application.svg",
+      "static/icon/home/application-active.svg",
+      "static/icon/home/my.svg",
+      "static/icon/home/my-active.svg",
+      "js/build/home.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "start.html": {
+    "resources": [
+      "home.html",
+      "js/build/vendor.bundle.js"
+    ],
+    "refer": [
+      "home.html"
+    ]
+  }
+}
