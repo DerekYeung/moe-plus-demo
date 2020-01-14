@@ -1,1 +1,1 @@
-module.exports = {"ip":"192.168.0.100","port":8080,"mode":"production","conf":"env","release":1};
+module.exports = {"ip":"192.168.43.112","port":8080,"mode":"production","conf":"env","release":1};
