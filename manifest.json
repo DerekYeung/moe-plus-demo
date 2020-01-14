@@ -1,479 +1,443 @@
 {
-	"@platforms": [
-		"android",
-		"iPhone"
-	],
-	"id": "moe-plus-demo",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "moe-plus-demo",/*应用名称，程序桌面图标名称*/
-	"version": {
-		"name": "1.0.0",/*应用版本名称*/
-		"code": ""
-	},
-	"description": "",/*应用描述信息*/
-	"icons": {
-		"72": "icon.png"
-	},
-	"launch_path": "start.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
-	"developer": {
-		"name": "DerekYeung",/*开发者名称*/
-		"email": "466836531@qq.com",/*开发者邮箱地址*/
-		"url": "http://supx.me"
-	},
-	"unpackage": [
-		"src"
-	],
-	"permissions": {
-		"Cache": {
-			"description": "管理应用缓存"
-		},
-		"Console": {
-			"description": "跟踪调试输出日志"
-		},
-		"Contacts": {
-			"description": "访问系统联系人信息"
-		},
-		"Events": {
-			"description": "应用扩展事件"
-		},
+    "@platforms" : [ "android", "iPhone" ],
+    "id" : "moe-plus-demo", /*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name" : "moe-plus-demo", /*应用名称，程序桌面图标名称*/
+    "version" : {
+        "name" : "1.0.0", /*应用版本名称*/
+        "code" : ""
+    },
+    "description" : "", /*应用描述信息*/
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "start.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer" : {
+        "name" : "DerekYeung", /*开发者名称*/
+        "email" : "466836531@qq.com", /*开发者邮箱地址*/
+        "url" : "http://supx.me"
+    },
+    "unpackage" : [ "src" ],
+    "permissions" : {
+        "Cache" : {
+            "description" : "管理应用缓存"
+        },
+        "Console" : {
+            "description" : "跟踪调试输出日志"
+        },
+        "Contacts" : {
+            "description" : "访问系统联系人信息"
+        },
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "Speech" : {},
+        "Fingerprint" : {},
+        "LivePusher" : {},
+        "VideoPlayer" : {},
+        "SQLite" : {}
+    },
+    "plus" : {
+        "error" : {
+            "url" : "error.html"
+        },
+        "splashscreen" : {
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting" : false
+        },
+        "statusbar" : {
+            "immersed" : true
+        },
+        "useragent" : {
+            "value" : "ewsedu ehome ews-next",
+            "concatenate" : true
+        },
+        "popGesture" : "hide", /*设置应用默认侧滑返回关闭Webview窗口，none为无侧滑返回功能，hide为侧滑隐藏Webview窗口。参考ask.dcloud.net.cn/article/102*/
+        "runmode" : "liberate", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature" : "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+        "distribute" : {
+            "plugins" : {
+                "statics" : {},
+                "push" : {},
+                "share" : {},
+                "payment" : {},
+                "oauth" : {},
+                "maps" : {},
+                "speech" : {
+                    "ifly" : {}
+                }
+            },
+            "apple" : {
+                "appid" : "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision" : "", /*iOS应用打包配置文件*/
+                "password" : "", /*iOS应用打包个人证书导入密码*/
+                "p12" : "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices" : "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks" : [],
+                "plistcmds" : [
+                    "Set :NSMicrophoneUsageDescription 我们将使用您的麦克风为您提供拍语音录制服务",
+                    "Set :NSBluetoothAlwaysUsageDescription 我们将使用您的蓝牙为您提供蓝牙相关服务",
+                    "Set :NSPhotoLibraryUsageDescription 我们将读取您的相册为您提供拍照上传图片服务",
+                    "Set :NSCameraUsageDescription 我们将使用您的相机为您提供拍照上传图片服务",
+                    "Set :NSPhotoLibraryAddUsageDescription 我们将保存图片到您的相册",
+                    "Set :NSLocationAlwaysUsageDescription 我们将获取您的定位信息用于导航或路径规划",
+                    "Set :NSLocationWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位",
+                    "Set :NSLocationAlwaysAndWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位或导航"
+                ],
+                "privacyDescription" : {
+                    "NSMicrophoneUsageDescription" : "我们将使用您的麦克风为您提供拍语音录制服务",
+                    "NSBluetoothAlwaysUsageDescription" : "我们将使用您的蓝牙为您提供蓝牙相关服务"
+                }
+            },
+            "google" : {
+                "packagename" : "", /*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore" : "", /*Android应用打包使用的密钥库文件*/
+                "password" : "", /*Android应用打包使用密钥库中证书的密码*/
+                "aliasname" : "", /*Android应用打包使用密钥库中证书的别名*/
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission  android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.USE_FINGERPRINT\"/>"
+                ]
+            },
+            "orientation" : [ "portrait-primary" ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons" : {
+                "ios" : {
+                    "prerendered" : true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
 
-		"Maps": {
-			"description": "管理地图插件"
-		},
-		"Speech": {},
-		"Push": {},
-		"Share": {},
-		"OAuth": {},
-		"Payment": {},
-		"Fingerprint": {},
-		"LivePusher": {},
-		"VideoPlayer": {},"Statistic":{}
-	},
-	"plus": {
-		"error": {
-			"url": "error.html"
-		},
-		"splashscreen": {
-			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": false
-		},
-		"statusbar": {
-			"immersed": true
-		},
-		"useragent": {
-			"value": "ewsedu ehome ews-next",
-			"concatenate": true
-		},
-		"popGesture": "hide",/*设置应用默认侧滑返回关闭Webview窗口，none为无侧滑返回功能，hide为侧滑隐藏Webview窗口。参考ask.dcloud.net.cn/article/102*/
-		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
-		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-		"distribute": {
-			"plugins": {"statics":{"umeng":{"appkey_ios":"5cbd780d61f564ac650000b8","channelid_ios":"ios","appkey_android":"5cbd77a10cafb2d707000cba","channelid_android":"android"}},
-				"push": {
-					"igexin": {
-						"appid": "GY0rtM5aXs82M0QUsxsFK1",
-						"appkey": "9U7fMEv2PE7PkTdctywBK5",
-						"appsecret": "eInOlISRPY7lMsKdj8HOhA"
-					}
-				},
-				"share": {
-					"weixin": {
-						"appid": "wx9506352431db385c",
-						"appsecret": "ad97bacb85b0e0f44b57c79dd59d30c2",
-						"description": "可选，微信分享"
-					}
-				},
-				"payment": {
-					"weixin": {
-						"description": "微信支付",
-						"appid": "wx9506352431db385c"
-					},
-					"alipay": {
-						"description": "阿里支付",
-						"scheme": ""
-					}
-				},
-				"oauth": {
-					"weixin": {
-						"appid": "wx9506352431db385c",
-						"appsecret": "069d743fc4859c3e6092ef27f57fe98c"
-					}
-				},
-				"maps": {
-					"baidu": {
-						"appkey_ios": "8QtManViBcUAPxKkWvpGvRsBzESfc5L4",
-						"appkey_android": "TgZuP5OYsksGaVmIhdYOpwVNiDkKYBeF",
-						"appkey": "",
-						"description": ""
-					}
-				}
-			},
-			"apple": {
-				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
-				"mobileprovision": "",/*iOS应用打包配置文件*/
-				"password": "",/*iOS应用打包个人证书导入密码*/
-				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
-				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
-				"frameworks": [],
-				"plistcmds": [
-					"Set :NSMicrophoneUsageDescription 我们将使用您的麦克风为您提供拍语音录制服务",
-					"Set :NSBluetoothAlwaysUsageDescription 我们将使用您的蓝牙为您提供蓝牙相关服务",
-					"Set :NSPhotoLibraryUsageDescription 我们将读取您的相册为您提供拍照上传图片服务",
-					"Set :NSCameraUsageDescription 我们将使用您的相机为您提供拍照上传图片服务",
-					"Set :NSPhotoLibraryAddUsageDescription 我们将保存图片到您的相册",
-					"Set :NSLocationAlwaysUsageDescription 我们将获取您的定位信息用于导航或路径规划",
-					"Set :NSLocationWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位",
-					"Set :NSLocationAlwaysAndWhenInUseUsageDescription 我们将获取您的定位信息用于签到定位或导航"
-				],
-				"privacyDescription": {
-					"NSMicrophoneUsageDescription": "我们将使用您的麦克风为您提供拍语音录制服务",
-					"NSBluetoothAlwaysUsageDescription": "我们将使用您的蓝牙为您提供蓝牙相关服务"
-				}
-			},
-			"google": {
-				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
-				"keystore": "",/*Android应用打包使用的密钥库文件*/
-				"password": "",/*Android应用打包使用密钥库中证书的密码*/
-				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission  android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.USE_FINGERPRINT\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
-			},
-			"orientation": [
-				"portrait-primary"
-			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
-			"icons": {
-				"ios": {
-					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
-					/*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
-					"iphone": {
-						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
-						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
-						/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
-						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
-						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
-						/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
-						"app@2x": "unpackage/res/icons/120x120.png",
-						"app@3x": "unpackage/res/icons/180x180.png",
-						"settings@3x": "unpackage/res/icons/87x87.png",
-						"settings@2x": "unpackage/res/icons/58x58.png",
-						"spotlight@2x": "unpackage/res/icons/80x80.png",
-						"spotlight@3x": "unpackage/res/icons/120x120.png",
-						"notification@3x": "unpackage/res/icons/60x60.png",
-						"notification@2x": "unpackage/res/icons/40x40.png"
-					},
-					"ipad": {
-						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
-						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
-						/*iPad iOS7程序图标，分辨率：76x76*/
-						/*iPad iOS7高分屏程序图标，分辨率：152x152*/
-						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
-						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
-						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
-						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						/*iPad设置页面程序图标，分辨率：29x29*/
-						"app": "unpackage/res/icons/76x76.png",
-						"app@2x": "unpackage/res/icons/152x152.png",
-						"settings": "unpackage/res/icons/29x29.png",
-						"proapp@2x": "unpackage/res/icons/167x167.png",
-						"spotlight": "unpackage/res/icons/40x40.png",
-						"settings@2x": "unpackage/res/icons/58x58.png",
-						"spotlight@2x": "unpackage/res/icons/80x80.png",
-						"notification": "unpackage/res/icons/20x20.png",
-						"notification@2x": "unpackage/res/icons/40x40.png"
-					},
-					"appstore": "unpackage/res/icons/1024x1024.png"
-				},
-				"android": {
-					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
-					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
-					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
-					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
-					"xxhdpi": "unpackage/res/icons/144x144.png",
-					"xxxhdpi": "unpackage/res/icons/192x192.png"
-				}
-			},
-			"splashscreen": {
-				"ios": {
-					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "unpackage/res/splash/640x960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "unpackage/res/splash/640x1136.png",
-						"iphonex": "unpackage/res/splash/1125x2436.png",
-						"retina47": "unpackage/res/splash/750x1334.png",
-						"retina55": "unpackage/res/splash/1242x2208.png"
-					},
-					"ipad": {
-						"portrait": "unpackage/res/splash/768x1004.png", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "unpackage/res/splash/1536x2008.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "unpackage/res/splash/768x1024.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": ""
-					}
-				},
-				"android": {
-					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "unpackage/res/splash/480x762.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "unpackage/res/splash/720x1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "unpackage/res/splash/1080x1882.png"
-				}
-			}
-		},"adid":"120366220906"
-	},
-	"dependencies": {
-		"pages": {
-			"index.html": {
-				"resources": [
-					"home.html",
-					"js/mui.js",
-					"js/build/vendor.bundle.js",
-					"js/build/index.js",
-					"static/loginBg.jpg",
-					"static/logo.png",
-					"static/logoTitle.png"
-				],
-				"refer": [
-					"home.html"
-				],
-				"priority": 0
-			},
-			"home.html": {
-				"href": "home.html",
-				"resources": [
-					"js/mui.js",
-					"js/build/vendor.bundle.js",
-					"js/build/plus.js",
-					"css/mui.css",
-					"fonts/mui.ttf",
-					"static/icon/home/message.svg",
-					"static/icon/home/message-active.svg",
-					"static/icon/home/contact.svg",
-					"static/icon/home/contact-active.svg",
-					"static/icon/home/application.svg",
-					"static/icon/home/application-active.svg",
-					"static/icon/home/my.svg",
-					"static/icon/home/my-active.svg",
-					"js/build/home.js"
-				],
-				"priority": 0,
-				"refer": []
-			},
-			"start.html": {
-				"resources": [
-					"home.html"
-				],
-				"refer": [],
-				"priority": 0
-			}
-		},
-		"idle": {
-			"resources": [
-				"src/test/e2e/runner.js",
-				"src/src/assets/image/module/zhangdan.png",
-				"src/src/assets/image/module/homework.png",
-				"src/src/assets/image/fileIcon/docx.png",
-				"src/src/components/view/content.vue",
-				"src/src/pages/user/page/identity.vue",
-				"src/app/plus.js",
-				"src/src/assets/image/fileIcon/jepg.png",
-				"src/src/pages/module/homework/item.vue",
-				"src/src/assets/image/module/kebiao.png",
-				"package.json",
-				"src/src/pages/user/page/account.vue",
-				"src/src/pages/module/mind/index.vue",
-				"src/src/assets/image/imagePlaceholder.png",
-				"src/src/assets/image/fileIcon/xlsx.png",
-				"src/src/assets/image/logo.png",
-				"src/build/logo.png",
-				"src/src/assets/image/module/message.png",
-				"src/src/components/Btn.vue",
-				"src/src/pages/chat/address/index.vue",
-				"src/src/components/card/background.vue",
-				"src/src/pages/user/page/invite.vue",
-				"src/src/pages/module/bill/list.vue",
-				"src/src/pages/common/attach/item.vue",
-				"src/src/assets/image/fileIcon/mp3.png",
-				"src/src/pages/common/target/item.vue",
-				"src/src/router/pages.js",
-				"src/src/pages/module/activity/index.vue",
-				"src/build/utils.js",
-				"src/src/pages/module/mind/list.vue",
-				"src/src/components/helper/margin-block.vue",
-				"src/src/components/DropdownMenu.vue",
-				"src/app/build.js",
-				"src/app/helper.js",
-				"src/src/components/Identity.vue",
-				"src/src/store/getter.js",
-				"src/src/components/form/picker-datetime.vue",
-				"src/src/components/card/simple-with-tag.vue",
-				"src/src/components/CommentTool.vue",
-				"src/src/assets/image/fileIcon/gif.png",
-				"src/src/pages/module/notify/item.vue",
-				"src/README.md",
-				"src/src/pages/module/comment/index.vue",
-				"src/src/assets/image/fileIcon/none.png",
-				"src/src/components/form/tool.vue",
-				"src/src/components/Avatar.vue",
-				"src/src/pages/module/notify/list.vue",
-				"src/src/assets/image/authBackground.png",
-				"src/src/components/view/pull-refresh.vue",
-				"src/src/components/helper/divider.vue",
-				"src/src/App.vue",
-				"src/src/components/loader.vue",
-				"src/src/pages/tool/qrcode/scaner.vue",
-				"src/src/components/Tab.vue",
-				"src/src/assets/image/module/notify.png",
-				"src/src/pages/module/homework/list.vue",
-				"src/src/assets/image/module/leave.png",
-				"src/src/components/helper/placeholder.vue",
-				"src/src/pages/module/activity/form.vue",
-				"src/src/components/skeleton/content.vue",
-				"src/src/components/Tip.vue",
-				"src/src/pages/module/notify/index.vue",
-				"views/scaner.html",
-				"src/src/assets/image/poster/edition1.jpg",
-				"src/src/pages/module/grade/item.vue",
-				"src/src/pages/user/page/order.vue",
-				"src/test/unit/setup.js",
-				"src/src/assets/image/module/xin.png",
-				"src/src/assets/image/fileIcon/pdf.png",
-				"src/src/components/form/receiver.vue",
-				"src/src/components/CommentBox.vue",
-				"src/src/components/Cell.vue",
-				"src/src/components/form/content.vue",
-				"src/src/assets/image/fileIcon/ppt.png",
-				"src/src/pages/module/bill/index.vue",
-				"src/build/webpack.base.conf.js",
-				"src/package-lock.json",
-				"src/app/version.js",
-				"src/src/pages/chat/page/index.vue",
-				"src/src/assets/image/fileIcon/doc.png",
-				"src/test/unit/jest.conf.js",
-				"src/src/pages/user/page/setting.vue",
-				"src/src/assets/image/fileIcon/jpg.png",
-				"src/build/webpack.dev.conf.js",
-				"src/config/test.env.js",
-				"src/src/pages/module/attendance/list.vue",
-				"src/config/dev.env.js",
-				"src/build/check-versions.js",
-				"src/src/pages/chat/address/teacher.vue",
-				"src/src/components/view/scroll.vue",
-				"src/src/pages/module/activity/item.vue",
-				"src/src/components/form/input.vue",
-				"views/scaner-scan.html",
-				"src/src/store/index.js",
-				"src/src/components/skeleton/list.vue",
-				"src/test/e2e/nightwatch.conf.js",
-				"src/build/vue-loader.conf.js",
-				"src/src/pages/user/page/about.vue",
-				"src/src/store/mutations.js",
-				"src/src/assets/image/tipImage.png",
-				"src/src/assets/image/fileIcon/png.png",
-				"src/src/components/card/normal.vue",
-				"src/src/pages/user/page/nickname.vue",
-				"src/src/components/view/header.vue",
-				"src/src/components/card/activity.vue",
-				"src/src/pages/module/activity/show.vue",
-				"src/app/main.js",
-				"src/src/components/Date.vue",
-				"src/src/assets/image/fileIcon/excel.png",
-				"src/src/components/card/item.vue",
-				"src/src/components/card/simple.vue",
-				"src/src/pages/chat/address/groupinfo.vue",
-				"src/src/pages/module/activity/rank.vue",
-				"src/src/pages/module/grade/index.vue",
-				"src/src/main.js",
-				"src/src/components/List.vue",
-				"src/build/webpack.prod.conf.js",
-				"src/src/pages/user/page/password.vue",
-				"src/src/assets/image/fileIcon/mp4.png",
-				"src/config/prod.env.js",
-				"src/src/assets/image/fileIcon/word.png",
-				"src/src/router/index.js",
-				"src/src/components/view/header-user.vue",
-				"src/src/pages/user/page/telephone.vue",
-				"src/src/pages/module/attendance/index.vue",
-				"src/src/assets/image/loading.gif",
-				"src/src/pages/module/comment/list.vue",
-				"src/src/assets/image/module/interaction.png",
-				"src/src/pages/module/leave/form.vue",
-				"src/src/pages/module/comment/item.vue",
-				"src/config/app.js",
-				"src/src/assets/image/avatar/girl.png",
-				"src/src/pages/module/homework/form.vue",
-				"src/test/e2e/specs/test.js",
-				"src/src/pages/webloader/app/index.vue",
-				"js/mui.min.js",
-				"src/src/components/Slide.vue",
-				"src/src/components/view/loading.vue",
-				"src/src/pages/tool/qrcode/scan.vue",
-				"src/src/pages/module/leave/item.vue",
-				"src/src/components/form/period.vue",
-				"src/src/pages/user/auth/form.vue",
-				"src/src/components/view/header-with-avatar.vue",
-				"src/config/index.js",
-				"src/config/app.dev.js",
-				"src/src/components/Icon.vue",
-				"src/src/pages/module/timetable/index.vue",
-				"src/static/logo-full-size.png",
-				"src/test/unit/specs/HelloWorld.spec.js",
-				"src/src/components/card/data.vue",
-				"src/src/components/view/loading/web.vue",
-				"src/src/components/Rank.vue",
-				"src/src/assets/image/module/check.png",
-				"src/src/store/action.js",
-				"src/index.html",
-				"src/src/pages/user/page/index.vue",
-				"src/src/pages/chat/page/item.vue",
-				"src/src/components/MainContent.vue",
-				"src/src/pages/module/leave/index.vue",
-				"src/src/assets/image/avatar/boy.png",
-				"src/src/pages/module/grade/list.vue",
-				"src/src/pages/module/mind/item.vue",
-				"src/app/package.json",
-				"src/src/pages/module/leave/list.vue",
-				"src/src/components/card/attendance.vue",
-				"src/src/components/card/bill.vue",
-				"src/src/assets/image/logoTitle.png",
-				"src/src/pages/user/page/wechat.vue",
-				"src/src/components/Popup.vue",
-				"src/app/bridge.js",
-				"src/src/components/card/grade.vue",
-				"src/src/assets/image/module/chengjidan.png",
-				"src/build/build.js",
-				"src/src/components/Pic.vue",
-				"src/src/assets/image/fileIcon/xls.png",
-				"src/app/webpack.config.js",
-				"src/src/components/skeleton/comment-box.vue",
-				"src/src/components/skeleton/card.vue",
-				"src/src/assets/image/tip/grade.png",
-				"src/src/pages/module/mind/form.vue",
-				"src/src/assets/image/avatar/default.png",
-				"src/src/pages/common/target/index.vue",
-				"src/package.json",
-				"dist/index.html",
-				"src/test/e2e/custom-assertions/elementCount.js",
-				"src/src/pages/user/auth/login.vue",
-				"src/src/pages/module/homework/index.vue",
-				"src/src/pages/user/auth/index.vue",
-				"src/src/assets/image/tip/mobile.png",
-				"src/build/map.js",
-				"src/src/assets/image/cardBackground.png",
-				"src/src/components/skeleton/block.vue",
-				"js/build/bridge.js",
-				"src/src/assets/image/fileIcon/mov.png",
-				"src/src/pages/module/index/index.vue",
-				"src/src/assets/image/loginBg.jpg",
-				"src/src/components/Biscuit.vue",
-				"src/src/pages/module/notify/form.vue",
-				"src/app/index.js",
-				"src/src/assets/image/tip/none.png",
-				"src/src/components/Captcha.vue",
-				"src/src/pages/module/mind/create.vue",
-				"src/src/pages/module/comment/form.vue"
-			]
-		}
-	}
+                    /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone" : {
+                        "normal" : "", /*iPhone普通屏幕程序图标，分辨率：57x57*/
+                        "retina" : "", /*iPhone高分屏程序图标，分辨率：114x114*/
+
+                        /*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+                        "spotlight-normal" : "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina" : "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+
+                        /*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "", /*iPhone设置页面程序图标，分辨率：29x29*/
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png"
+                    },
+                    "ipad" : {
+                        "normal" : "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina" : "", /*iPad高分屏程序图标，分辨率：144x144*/
+
+                        /*iPad iOS7程序图标，分辨率：76x76*//*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal" : "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina" : "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*//*iPad设置页面程序图标，分辨率：29x29*/
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png"
+                    },
+                    "appstore" : "unpackage/res/icons/1024x1024.png"
+                },
+                "android" : {
+                    "mdpi" : "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi" : "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi" : "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi" : "unpackage/res/icons/96x96.png", /*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "default" : ""
+                    },
+                    "ipad" : {
+                        /*iPad竖屏启动图片，分辨率：768x1004*//*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape" : "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina" : "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+
+                        /*iPad iOS7竖屏启动图片，分辨率：768x1024*//*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7" : "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7" : ""
+                    }
+                },
+                "android" : {
+                    "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi" : ""
+                }
+            }
+        }
+    },
+    "dependencies" : {
+        "pages" : {
+            "index.html" : {
+                "resources" : [
+                    "home.html",
+                    "js/mui.js",
+                    "js/build/vendor.bundle.js",
+                    "js/build/index.js",
+                    "static/loginBg.jpg",
+                    "static/logo.png",
+                    "static/logoTitle.png"
+                ],
+                "refer" : [ "home.html" ],
+                "priority" : 0
+            },
+            "home.html" : {
+                "href" : "home.html",
+                "resources" : [
+                    "js/mui.js",
+                    "js/build/vendor.bundle.js",
+                    "js/build/plus.js",
+                    "css/mui.css",
+                    "fonts/mui.ttf",
+                    "static/icon/home/message.svg",
+                    "static/icon/home/message-active.svg",
+                    "static/icon/home/contact.svg",
+                    "static/icon/home/contact-active.svg",
+                    "static/icon/home/application.svg",
+                    "static/icon/home/application-active.svg",
+                    "static/icon/home/my.svg",
+                    "static/icon/home/my-active.svg",
+                    "js/build/home.js"
+                ],
+                "priority" : 0,
+                "refer" : []
+            },
+            "start.html" : {
+                "resources" : [ "home.html" ],
+                "refer" : [],
+                "priority" : 0
+            }
+        },
+        "idle" : {
+            "resources" : [
+                "src/test/e2e/runner.js",
+                "src/src/assets/image/module/zhangdan.png",
+                "src/src/assets/image/module/homework.png",
+                "src/src/assets/image/fileIcon/docx.png",
+                "src/src/components/view/content.vue",
+                "src/src/pages/user/page/identity.vue",
+                "src/app/plus.js",
+                "src/src/assets/image/fileIcon/jepg.png",
+                "src/src/pages/module/homework/item.vue",
+                "src/src/assets/image/module/kebiao.png",
+                "package.json",
+                "src/src/pages/user/page/account.vue",
+                "src/src/pages/module/mind/index.vue",
+                "src/src/assets/image/imagePlaceholder.png",
+                "src/src/assets/image/fileIcon/xlsx.png",
+                "src/src/assets/image/logo.png",
+                "src/build/logo.png",
+                "src/src/assets/image/module/message.png",
+                "src/src/components/Btn.vue",
+                "src/src/pages/chat/address/index.vue",
+                "src/src/components/card/background.vue",
+                "src/src/pages/user/page/invite.vue",
+                "src/src/pages/module/bill/list.vue",
+                "src/src/pages/common/attach/item.vue",
+                "src/src/assets/image/fileIcon/mp3.png",
+                "src/src/pages/common/target/item.vue",
+                "src/src/router/pages.js",
+                "src/src/pages/module/activity/index.vue",
+                "src/build/utils.js",
+                "src/src/pages/module/mind/list.vue",
+                "src/src/components/helper/margin-block.vue",
+                "src/src/components/DropdownMenu.vue",
+                "src/app/build.js",
+                "src/app/helper.js",
+                "src/src/components/Identity.vue",
+                "src/src/store/getter.js",
+                "src/src/components/form/picker-datetime.vue",
+                "src/src/components/card/simple-with-tag.vue",
+                "src/src/components/CommentTool.vue",
+                "src/src/assets/image/fileIcon/gif.png",
+                "src/src/pages/module/notify/item.vue",
+                "src/README.md",
+                "src/src/pages/module/comment/index.vue",
+                "src/src/assets/image/fileIcon/none.png",
+                "src/src/components/form/tool.vue",
+                "src/src/components/Avatar.vue",
+                "src/src/pages/module/notify/list.vue",
+                "src/src/assets/image/authBackground.png",
+                "src/src/components/view/pull-refresh.vue",
+                "src/src/components/helper/divider.vue",
+                "src/src/App.vue",
+                "src/src/components/loader.vue",
+                "src/src/pages/tool/qrcode/scaner.vue",
+                "src/src/components/Tab.vue",
+                "src/src/assets/image/module/notify.png",
+                "src/src/pages/module/homework/list.vue",
+                "src/src/assets/image/module/leave.png",
+                "src/src/components/helper/placeholder.vue",
+                "src/src/pages/module/activity/form.vue",
+                "src/src/components/skeleton/content.vue",
+                "src/src/components/Tip.vue",
+                "src/src/pages/module/notify/index.vue",
+                "views/scaner.html",
+                "src/src/assets/image/poster/edition1.jpg",
+                "src/src/pages/module/grade/item.vue",
+                "src/src/pages/user/page/order.vue",
+                "src/test/unit/setup.js",
+                "src/src/assets/image/module/xin.png",
+                "src/src/assets/image/fileIcon/pdf.png",
+                "src/src/components/form/receiver.vue",
+                "src/src/components/CommentBox.vue",
+                "src/src/components/Cell.vue",
+                "src/src/components/form/content.vue",
+                "src/src/assets/image/fileIcon/ppt.png",
+                "src/src/pages/module/bill/index.vue",
+                "src/build/webpack.base.conf.js",
+                "src/package-lock.json",
+                "src/app/version.js",
+                "src/src/pages/chat/page/index.vue",
+                "src/src/assets/image/fileIcon/doc.png",
+                "src/test/unit/jest.conf.js",
+                "src/src/pages/user/page/setting.vue",
+                "src/src/assets/image/fileIcon/jpg.png",
+                "src/build/webpack.dev.conf.js",
+                "src/config/test.env.js",
+                "src/src/pages/module/attendance/list.vue",
+                "src/config/dev.env.js",
+                "src/build/check-versions.js",
+                "src/src/pages/chat/address/teacher.vue",
+                "src/src/components/view/scroll.vue",
+                "src/src/pages/module/activity/item.vue",
+                "src/src/components/form/input.vue",
+                "views/scaner-scan.html",
+                "src/src/store/index.js",
+                "src/src/components/skeleton/list.vue",
+                "src/test/e2e/nightwatch.conf.js",
+                "src/build/vue-loader.conf.js",
+                "src/src/pages/user/page/about.vue",
+                "src/src/store/mutations.js",
+                "src/src/assets/image/tipImage.png",
+                "src/src/assets/image/fileIcon/png.png",
+                "src/src/components/card/normal.vue",
+                "src/src/pages/user/page/nickname.vue",
+                "src/src/components/view/header.vue",
+                "src/src/components/card/activity.vue",
+                "src/src/pages/module/activity/show.vue",
+                "src/app/main.js",
+                "src/src/components/Date.vue",
+                "src/src/assets/image/fileIcon/excel.png",
+                "src/src/components/card/item.vue",
+                "src/src/components/card/simple.vue",
+                "src/src/pages/chat/address/groupinfo.vue",
+                "src/src/pages/module/activity/rank.vue",
+                "src/src/pages/module/grade/index.vue",
+                "src/src/main.js",
+                "src/src/components/List.vue",
+                "src/build/webpack.prod.conf.js",
+                "src/src/pages/user/page/password.vue",
+                "src/src/assets/image/fileIcon/mp4.png",
+                "src/config/prod.env.js",
+                "src/src/assets/image/fileIcon/word.png",
+                "src/src/router/index.js",
+                "src/src/components/view/header-user.vue",
+                "src/src/pages/user/page/telephone.vue",
+                "src/src/pages/module/attendance/index.vue",
+                "src/src/assets/image/loading.gif",
+                "src/src/pages/module/comment/list.vue",
+                "src/src/assets/image/module/interaction.png",
+                "src/src/pages/module/leave/form.vue",
+                "src/src/pages/module/comment/item.vue",
+                "src/config/app.js",
+                "src/src/assets/image/avatar/girl.png",
+                "src/src/pages/module/homework/form.vue",
+                "src/test/e2e/specs/test.js",
+                "src/src/pages/webloader/app/index.vue",
+                "js/mui.min.js",
+                "src/src/components/Slide.vue",
+                "src/src/components/view/loading.vue",
+                "src/src/pages/tool/qrcode/scan.vue",
+                "src/src/pages/module/leave/item.vue",
+                "src/src/components/form/period.vue",
+                "src/src/pages/user/auth/form.vue",
+                "src/src/components/view/header-with-avatar.vue",
+                "src/config/index.js",
+                "src/config/app.dev.js",
+                "src/src/components/Icon.vue",
+                "src/src/pages/module/timetable/index.vue",
+                "src/static/logo-full-size.png",
+                "src/test/unit/specs/HelloWorld.spec.js",
+                "src/src/components/card/data.vue",
+                "src/src/components/view/loading/web.vue",
+                "src/src/components/Rank.vue",
+                "src/src/assets/image/module/check.png",
+                "src/src/store/action.js",
+                "src/index.html",
+                "src/src/pages/user/page/index.vue",
+                "src/src/pages/chat/page/item.vue",
+                "src/src/components/MainContent.vue",
+                "src/src/pages/module/leave/index.vue",
+                "src/src/assets/image/avatar/boy.png",
+                "src/src/pages/module/grade/list.vue",
+                "src/src/pages/module/mind/item.vue",
+                "src/app/package.json",
+                "src/src/pages/module/leave/list.vue",
+                "src/src/components/card/attendance.vue",
+                "src/src/components/card/bill.vue",
+                "src/src/assets/image/logoTitle.png",
+                "src/src/pages/user/page/wechat.vue",
+                "src/src/components/Popup.vue",
+                "src/app/bridge.js",
+                "src/src/components/card/grade.vue",
+                "src/src/assets/image/module/chengjidan.png",
+                "src/build/build.js",
+                "src/src/components/Pic.vue",
+                "src/src/assets/image/fileIcon/xls.png",
+                "src/app/webpack.config.js",
+                "src/src/components/skeleton/comment-box.vue",
+                "src/src/components/skeleton/card.vue",
+                "src/src/assets/image/tip/grade.png",
+                "src/src/pages/module/mind/form.vue",
+                "src/src/assets/image/avatar/default.png",
+                "src/src/pages/common/target/index.vue",
+                "src/package.json",
+                "dist/index.html",
+                "src/test/e2e/custom-assertions/elementCount.js",
+                "src/src/pages/user/auth/login.vue",
+                "src/src/pages/module/homework/index.vue",
+                "src/src/pages/user/auth/index.vue",
+                "src/src/assets/image/tip/mobile.png",
+                "src/build/map.js",
+                "src/src/assets/image/cardBackground.png",
+                "src/src/components/skeleton/block.vue",
+                "js/build/bridge.js",
+                "src/src/assets/image/fileIcon/mov.png",
+                "src/src/pages/module/index/index.vue",
+                "src/src/assets/image/loginBg.jpg",
+                "src/src/components/Biscuit.vue",
+                "src/src/pages/module/notify/form.vue",
+                "src/app/index.js",
+                "src/src/assets/image/tip/none.png",
+                "src/src/components/Captcha.vue",
+                "src/src/pages/module/mind/create.vue",
+                "src/src/pages/module/comment/form.vue"
+            ]
+        }
+    }
 }
